@@ -1,0 +1,16 @@
+When you are doing DFS or BFS traversal on any graph then the basic fact that you need to remember is that
+the algorithm guarantees only to visit all the reachable nodes from the source node only once
+
+it does not guarantee to visit all paths present in the graph
+
+While solving problems on finding if ther is any cycle in the grpah present 
+I wanted to also count the total no of cycles present in the grpah
+
+after thinking for some time I realized that these two traversal mechanism are not going to help you traverse all the possible paths 
+present in the graph.
+
+it only guarantees that all the reachable nodes will be visited once.
+
+So i am still wondering how to find all the unique paths to reach from start node to all other nodes in a graph
+
+what would be the time complexity of that algorithm and all
