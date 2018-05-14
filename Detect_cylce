@@ -1,5 +1,5 @@
 // To detect a cycle in a graph using DFS and special array of Instack
-// This is a directed graph 
+// This is a directed graph  
 #include<bits/stdc++.h> 
 using namespace std;  
           
