@@ -6,7 +6,7 @@ using namespace std;
 void addedge(vector<int> adj[],int s,int d)
 {
 	adj[s].push_back(d);
-}
+} 
 
 bool DFS_cycle(vector<int> adj[],int n)
 {
