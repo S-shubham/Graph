@@ -2,7 +2,7 @@
 // This is a directed graph   
 #include<bits/stdc++.h>  
 using namespace std;   
-           
+            
 void addedge(vector<int> adj[],int s,int d)
 {   
 	adj[s].push_back(d);
