@@ -1,0 +1,56 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void addedge(vector<int> adj[],int s,int e)
+{
+	adj[s].push_back(e);
+}
+
+void BFS(vector<int>adj[],int n)
+{
+	bool visited[n];
+	for(int i=0;i<n;i++)
+	visited[i]=0;
+	queue<int>q;
+	q.push(0);
+	visited[0]=1;
+	
+	while(!q.empty())
+	{
+		int curr=q.front();
+		q.pop();
+		cout<<curr<<" ";
+		vector<int>:: iterator itr;
+		for(itr=adj[curr].begin();itr!=adj[curr].end();++itr)
+		{
+			if(!visited[*itr])
+			{
+				q.push(*itr);
+				visited[*itr]=1;
+			}
+		}
+	}
+}
+
+int main()
+{
+	cout<<"\nEnter the no of vertices : ";
+	int v;
+	cin>>v;
+	vector<int>adj[v];
+	for(int i=0;i<v;i++)
+	{
+		cout<<"\nEnter the no of edges for node "<<i;
+		int n;
+		cin>>n;
+		int x;
+		for(int j=0;j<n;j++)
+		{
+			cout<<"\nEnter edge : ";
+			cin>>x;
+			addedge(adj,i,x);
+		}
+	}
+	cout<<"\nThe breadth first search of the graph is : ";
+	BFS(adj,v);
+}
