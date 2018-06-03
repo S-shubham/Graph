@@ -8,7 +8,7 @@ using namespace std;
 void addedge(vector<int> adj[],int s,int d)
 {
 	adj[s].push_back(d);
-}
+}  
 
 void DFSutil(vector<int> adj[],int n ,bool visited[] ,int src)
 {
