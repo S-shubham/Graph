@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std; 
 
-void addedge(vector<int> adj[],int s,int e)
+void addedge(vector<int> adj[],int s,int e)  
 {
 	adj[s].push_back(e);
 }
