@@ -4,7 +4,7 @@ the algorithm guarantees only to visit all the reachable nodes from the source n
 it does not guarantee to visit all paths present in the graph
 
 While solving problems on finding if ther is any cycle in the grpah present 
-I wanted to also count the total no of cycles present in the grpah     
+I wanted to also count the total no of cycles present in the grpah       
 
 after thinking for some time I realized that these two traversal mechanism are not going to help you traverse all the possible paths 
 present in the graph.
