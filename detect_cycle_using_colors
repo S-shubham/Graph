@@ -3,7 +3,7 @@
 // white="undiscovered node"
 // gray="Dicovered and under processing"
 // black="processed node"
-  
+   
 #include<bits/stdc++.h>
 using namespace std;
   
