@@ -1,0 +1,10 @@
+Theorem 1.28 In an acyclic directed graph D there exists at least one vertex with zero
+indegree and at least one vertex with zero outdegree. 
+Select any vertex with zero outdegree. Since D is acyclic, by Theorem 1.28, there is at least
+one such vertex in D. Label this vertex with the integer n. Now remove from D this vertex
+and the edges incident on it. Let D′ be the resulting graph. Since D′
+is also acyclic, we can
+now select a vertex whose outdegree in D′
+is zero. Label this with the integer n − 1. Repeat
+this procedure until all the vertices are labeled. It is now easy to verify that this procedure
+results in a topological sorting of the vertices of D.
