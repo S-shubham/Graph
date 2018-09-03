@@ -1,0 +1,51 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+struct node{
+	int nodeNo;
+	int wt;
+	bool visited;
+};
+
+int main()
+{
+	vector<node> arr[4];
+	
+	int mat[4][4]={
+	{0,1,0,0},
+	{1,0,0,1},
+	{0,0,0,1},
+	{0,1,1,0}
+	};
+	
+	for(int i=0;i<4;i++)
+	{
+		for(int j=0;j<4;j++)
+		{
+			if(mat[i][j])
+			{
+				node * temp=new node();
+				temp->nodeNo=j;
+				temp->wt=1;
+				temp->visited=false;
+				
+				arr[i].push_back(*temp);
+			}
+			
+		}
+	}
+	
+	cout<<"\nAll the nodes has been created ";
+	
+	for(int i=0;i<4;i++)
+	{
+		vector<node>::iterator itr;
+		for(itr=arr[i].begin();itr!=arr[i].end();++itr)
+		{
+			cout<<(*itr).nodeNo<<" ";
+		
+		}
+		cout<<"\n ";
+	}
+	
+}
