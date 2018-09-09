@@ -1,0 +1,64 @@
+// given a graph do a dfs
+// graph is represented using adjacency list
+// we will use vector of vector to represent graph
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void dfs(vector<vector<int>> g)
+{
+	int v=g.size();
+	char visited[v];
+	for(int i=0;i<v;i++)
+	visited[i]='b';
+	visited[0]='g';
+	int parent[v];
+	for(int i=0;i<v;i++)
+	parent[i]=NULL;
+	queue<int>q;
+	q.push(0);
+	while(!q.empty())
+	{
+		int cur=q.front();
+		cout<<cur<<"->";
+		for(auto itr:g[cur])
+		{
+			if(visited[itr]=='b')
+			{
+				visited[itr]='g';
+				parent[itr]=cur;
+				q.push(itr);
+			}
+		}
+		q.pop();
+	}
+}
+
+int main()
+{
+	vector<vector<int> >v(6);
+	v[0].push_back(2);
+	v[0].push_back(1);
+	v[0].push_back(5);
+	v[1].push_back(2);
+	v[1].push_back(0);
+	v[1].push_back(3);
+	v[1].push_back(5);
+	v[2].push_back(0);
+	v[2].push_back(1);
+	v[2].push_back(3);
+	v[2].push_back(4);
+	v[3].push_back(1);
+	v[3].push_back(2);
+	v[3].push_back(4);
+	v[4].push_back(5);
+	v[4].push_back(2);
+	v[4].push_back(3);
+	v[5].push_back(0);
+	v[5].push_back(1);
+	v[5].push_back(4);
+	
+	cout<<"Dfs traversal of my graph is: ";
+	dfs(v);
+	
+}
